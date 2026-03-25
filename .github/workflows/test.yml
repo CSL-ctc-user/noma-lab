@@ -1,4 +1,4 @@
-name: Basic Test
+name: CI/CD Pipeline
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
-      - name: Run app
-        run: echo "test" | python app.py
+      - name: Install dependencies
+        run: pip install fastapi uvicorn google-cloud-aiplatform
+      - name: Run test
+        run: python -c "import app"
