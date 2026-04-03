@@ -6,7 +6,7 @@ app = FastAPI()
 
 PROJECT_ID = "my-project-csl-486600"
 REGION = "asia-northeast1"
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-2.5-flash"
 URL = f"https://{REGION}-aiplatform.googleapis.com/v1/projects/{PROJECT_ID}/locations/{REGION}/publishers/google/models/{MODEL}:generateContent"
 
 def get_access_token() -> str:
