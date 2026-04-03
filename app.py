@@ -4,7 +4,7 @@ from vertexai.generative_models import GenerativeModel
 
 app = FastAPI()
 vertexai.init(project="my-project-csl-486600", location="asia-northeast1")
-model = GenerativeModel("gemini-1.5-flash")
+model = GenerativeModel("gemini-2.0-flash-001")
 
 @app.post("/chat")
 async def chat(body: dict):
